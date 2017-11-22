@@ -1,0 +1,15 @@
+{
+  "name": "node-vanilla-http-server",
+  "version": "1.0.0",
+  "description": "Vanilla Node HTTP Server",
+  "main": "server.js",
+  "repository": "git@github.com:Gurenax/node-vanilla-http-server.git",
+  "author": "Glenn Dimaliwat <glenn.dimaliwat@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  },
+  "scripts": {
+    "dev": "nodemon server.js"
+  }
+}
