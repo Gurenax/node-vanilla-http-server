@@ -22,7 +22,7 @@ const server = HTTP.createServer((request, response) => {
     FS.readFile(`postcodes/${postCode}`, 'utf8', (err, data) => {
       if (err) {
         response.writeHead(404)
-        sendJSON(response, {'error': 'Page not found'})
+        sendJSON(response, JSON.stringify( {'error': 'Page not found'} ))
       }
       else {
         sendJSON(response, data)
@@ -43,7 +43,7 @@ const server = HTTP.createServer((request, response) => {
     FS.readFile('assets/main.css', 'utf8', (err, data) => {
       if (err) {
         response.writeHead(404)
-        sendJSON(response, {'error': 'Page not found'})
+        sendJSON(response, JSON.stringify( {'error': 'Page not found'} ))
       }
       else {
         sendCSS(response, data)
@@ -54,7 +54,7 @@ const server = HTTP.createServer((request, response) => {
     FS.readFile('assets/example.gif', (err, data) => {
       if (err) {
         response.writeHead(404)
-        sendJSON(response, {'error': 'Page not found'})
+        sendJSON(response, JSON.stringify( {'error': 'Page not found'} ))
       }
       else {
         sendGIF(response, data)
@@ -63,7 +63,7 @@ const server = HTTP.createServer((request, response) => {
 
   } else {
     response.writeHead(404)
-    sendJSON(response, {'error': 'Page not found'})
+    sendJSON(response, JSON.stringify( {'error': 'Page not found'} ))
     // response.writeHead(404)
     // response.end('Page not found')
   }

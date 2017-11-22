@@ -2,6 +2,7 @@ function sendJSON(response, object) {
   response.writeHead(response.statusCode, {
     'Content-Type': 'application/json'
   })
+  // console.log(typeof object)
   response.end(object)
 }
 
